@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>FOX Play</title>
+<style type="text/css">
+body {
+	background-color: #eeeeee;
+	background-image: url(images/header.png);
+	background-repeat: repeat-x;
+	margin: 0px;
+}
+
+a.absolute {
+	position: absolute;
+	width: 100px;
+	height: 25px;
+	z-index: 4;
+}
+a.absolute.paranorman {
+left: 603px;
+	top: 214px; 
+}
+a.absolute.paranorman1 {
+left: 876px;top: 214px; width: 110px;
+	
+}
+a.absolute div {
+	display: none;
+	position: absolute;
+	cursor: default
+}
+a.absolute.paranorman div { top: 16px; left:-73px}
+a.absolute.paranorman1 div { top: 16px; left:18px}
+
+a.absolute:hover div {
+	display: block;
+	z-index: 3
+}
+a.absolute div span {
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	width: 181px;
+	height: 31px;
+ 	
+}
+a.absolute.paranorman div span {
+	left: 6px;
+	top: 222px;
+}
+a.absolute.paranorman1 div span {
+	left: 6px;
+	top: 222px;
+}
+</style>
+</head>
+
+<body>
+
+<div align="center" style="position: relative; margin:auto; width:1300px">
+
+<!--#include virtual="/foxplaycolor/auth/includes/ingress.html" -->
+
+<!--#include virtual="/foxplaycolor/auth/includes/menu-home.html" -->
+<img  src="ingress/ingress-home.jpg" width="1300" height="900" border="0" usemap="#Map23"/>
+<a href="#" class="absolute paranorman">
+  <div> <span class="hover-lista"></span> <img src="images/dropDown_Paises.png" /> </div>
+  </a>
+  <a href="#" class="absolute paranorman1">
+  <div> <span class="hover-lista"></span> <img src="images/prensa.png" /> </div>
+  </a>
+ 

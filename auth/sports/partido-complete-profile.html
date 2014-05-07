@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>FOX Play</title>
+<style type="text/css">
+body {
+	background-color: #000;
+	background-image: url(../images/headersports.png);
+	background-repeat: repeat-x;
+	margin: 0px;
+}
+#apDiv1 {
+	position:absolute;
+	width:100%;
+	height:115px;
+	z-index:1; background:url(../images/opacity.png) repeat; min-height:2050px; padding:189px 0 0 0;  
+}
+.lista {
+	position:absolute;
+	width:100%;
+	
+	z-index:1;top:356px; left:-294px; 
+}
+.ckeckbox{cursor:pointer;padding:0 0 0 20px;font-family:'Tahoma';width:150px;float:left;background:url(../images/boton1.png) no-repeat left top; width:40px; height:40px; position:absolute; z-index:20; top:352px; left:346px} 
+.seleccionado{background:url(../images/boton2.png) no-repeat left top;width:40px; height:40px position:absolute; z-index:20}
+</style>
+
+<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(
+			function()
+			{
+				$(".botones").click(function(){funcionBoton1(this)});
+				$("#ckeckbox").click(function(){checkbox(this)})
+			}
+		);
+
+		function funcionBoton1(e)
+		{
+			var queBotonEs	=	$(e).attr("rel");
+			var checkeo	=	$("#ckeckbox");
+			if($(checkeo).hasClass("seleccionado"))//si esta checkeado
+			{
+				//document.location	=	"html1.html";
+				if(queBotonEs == 1)//boton1
+				{
+					document.location	=	"partido-facebook.html";
+				}
+				else if(queBotonEs == 2)//boton2
+				{
+					document.location	=	"partido-twitter.html";
+				}
+				else if(queBotonEs == 3)//boton3
+				{
+					document.location	=	("partido-email.html")
+				}
+			}
+			else//si no esta checkeado
+			{
+				//document.location	=	"html2.html";
+				if(queBotonEs == 1)//boton1
+				{
+					document.location	=("partido-complete-profile-acept.html")
+				}
+				else if(queBotonEs == 2)//boton2
+				{
+					document.location	=("partido-complete-profile-acept.html")
+				}
+				else if(queBotonEs == 3)//boton3
+				{
+					document.location	=("partido-complete-profile-acept.html")
+				}
+			}
+		}
+		function checkbox(e)
+		{
+			if($(e).hasClass("seleccionado"))
+			{
+				$(e).removeClass("seleccionado");
+			}
+			else
+			{
+				$(e).addClass("seleccionado");
+			}
+		}
+	</script>
+</head>
+
+<body>
+
+<div align="center" style="position: relative; margin:auto; width:1300px">
+
+<div id="apDiv1">
+<div>
+<div class="ckeckbox" id="ckeckbox"></div>
+
+<img src="../images/alert-ingress.png" border="0" usemap="#Mapingr" />
+  <map name="Mapingr" id="Mapingr">
+    <area  class="botones" rel="1" shape="rect" coords="37,246,265,295" href="#" />
+    <area  class="botones" rel="2" shape="rect" coords="40,299,271,348" href="#" />
+    <area  class="botones" rel="3" shape="rect" coords="559,301,657,344" href="#" />
+    <area shape="rect" coords="627,40,666,72" href="partido-login.html" />
+  </map>
+</div>
+</div>
+
+<!--#include virtual="/foxplaycolor/auth/includes/registered.html" -->
+
+<!--#include virtual="/foxplaycolor/auth/includes/menu-sports-login.html" --> 
+
+<img src="/foxplaycolor/auth/sports/foxplay_deportes_partido.png" width="1290" height="2100" border="0" usemap="#Maplis"/>
+
+
+</div>
+
+<div align="center" style="background:#222222; margin:0; padding:0; width:100%">
+
+<div style="position: relative; margin:auto; width:1300px">
+<!--#include virtual="/foxplaycolor/auth/includes/footer.html" -->
+</div>
+</div>
+
+</body>
+</html>
